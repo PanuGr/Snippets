@@ -1,0 +1,30 @@
+<!--HANDLEBARS.JS-->
+<!-- <script id="template" type="text/x-handlebars-template">
+        <p>
+          {{name}}
+        </p>
+      </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+    const content = {name:'Panu'};
+
+  const source = document.getElementById("template").innerHTML; //get the template
+  const template = Handlebars.compile(source);
+  const compiledHtml = template(content); //fill the template with our info
+   document.getElementById("template").innerHTML= compiledHtml; // add the filled template in destination
+</script> -->
+
+<!--TEMPLATE HTML-->
+<template>
+<h1>My Title</h1>
+<p>some text</p>
+</template>
+
+<script>
+  const template= document.querySelector('template')
+  const content=template.content.cloneNode(true)
+  document.body.append(content)
+  document.querySelector('h1').innerHTML="Trying html template"
+</script>

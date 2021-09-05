@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 300px;
+  min-width: 250px;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem black;
+  transition: 500ms;
+  padding: 1rem;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-1rem);
+}
+.card:hover ~ .card {
+  transform: translateX(135px);
+}
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-author {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  position: relative;
+  border-radius: 15px;
+  transition: background 0.3s ease-in-out;
+}
+.card-author p {
+  margin-bottom: 1px;
+}
+.card-author:hover {
+  background: rgb(9, 201, 153);
+}
+i {
+  color: white;
+  padding: 0.5rem;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.card-header h2:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
