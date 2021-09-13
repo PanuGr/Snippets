@@ -28,3 +28,25 @@
   document.body.append(content)
   document.querySelector('h1').innerHTML="Trying html template"
 </script>
+
+<!--Better templating-->
+  <template>
+        <h1>Destination</h1>    
+        <p>lorem</p>
+    </template>
+
+    <article>
+
+    </article>
+<script>
+        const target = document.querySelector('article');
+        const template = document.querySelector('template');
+
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector('h1').innerText = posts.destination;
+        
+        clone.querySelector("p").innerText = 'manually added some text';
+        target.append(clone);
+
+    </script>
