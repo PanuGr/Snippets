@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "start": "snowpack dev",
+        "build": "snowpack build",
+        "test": "npx tailwind -i style.css -o unbuddled.css",
+        "no-postcss":"npx tailwind -i style.css -o unbuddled.css --minify"
+      }
+}
