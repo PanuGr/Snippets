@@ -1,21 +1,46 @@
-<div>
-  <a href="#sidenav-open" id="sidenav-button" title="Open Menu" aria-label="Open Menu"><i class="fas fa-bars"></i></a>
+<aside id="sidenav-open">
+  <nav>
+    <h4>My navbar</h4>
+    <a href="#">Dashboard</a>
+    <a href="#">Profile</a>
+    <a href="#">Preferences</a>
+    <a href="#">Archive</a>
 
-  <nav id="sidenav-open">
-    .......
-    <a href="#" id="sidenav-close" title="Close Menu" aria-label="Close Menu"><i class="fas fa-times"></i></a>
+    <h4>Settings</h4>
+    <a href="#">Accessibility</a>
+    <a href="#">Theme</a>
+    <a href="#">Admin</a>
   </nav>
-</div>
 
+  <a
+    href="#"
+    id="sidenav-close"
+    title="Close Menu"
+    aria-label="Close Menu"
+    onchange="history.go(-1)"
+  ></a>
+</aside>
 
-<div>
-  <a href="#sidenav-open" id="sidenav-button" title="Open Menu" aria-label="Open Menu"><i class="fas fa-bars"></i></a>
-
-  <aside id="sidenav-open">
-    <nav>
-      <a href=""></a><a href=""></a><a href=""></a>
-    </nav>
-    <a href="#" id="sidenav-close" title="Close Menu" aria-label="Close Menu" onclick="window.history.back()"><i
-        class="fas fa-times"></i></a>
-  </aside>
-</div>
+<main>
+  <header>
+    <a
+      href="#sidenav-open"
+      id="sidenav-button"
+      class="hamburger"
+      title="Open Menu"
+      aria-label="Open Menu"
+    >
+      <svg
+        viewBox="0 0 50 40"
+        role="presentation"
+        focusable="false"
+        aria-label="trigram for heaven symbol"
+      >
+        <line x1="0" x2="100%" y1="10%" y2="10%" />
+        <line x1="0" x2="100%" y1="50%" y2="50%" />
+        <line x1="0" x2="100%" y1="90%" y2="90%" />
+      </svg>
+    </a>
+    <h1>Site Title</h1>
+  </header>
+</main>

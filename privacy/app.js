@@ -6,4 +6,4 @@ scripts.forEach(function (scriptUrl) {
     document.head.appendChild(s);
 });
 
-//make it hash-code and add it to headers
+//make it hash-code and add it to headers. IT can be links or whatever else that javascript adds automatically to the page

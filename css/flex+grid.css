@@ -7,74 +7,13 @@
   grid-template-columns: repeat(auto-fit, minmax (150, 1fr));
 }
 
-/*SIDEBAR*/
-.ex3 .parent {
-  display: grid;
-  grid-template-columns: minmax(150px, 25%) 1fr;
-}
-
-/*PANCAKE-CLASSIC LAYOUT*/
-.ex4 .parent {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-/*BIG LAYOUT-EXPANDING LEFT&RIGHT*/
-.ex5 .parent {
-  display: grid;
-  grid-template: auto 1fr auto / auto 1fr auto;
-}
-
-.ex5 header {
-  padding: 2rem;
-  grid-column: 1 / 4;
-}
-
-.ex5 .left-side {
-  grid-column: 1 / 2;
-}
-
-.ex5 main {
-  grid-column: 2 / 3;
-}
-
-.ex5 .right-side {
-  grid-column: 3 / 4;
-}
-
-.ex5 footer {
-  grid-column: 1 / 4;
-}
-
-/*SPAN GRID*/
-.ex6 .parent {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.ex6 .span-12 {
-  grid-column: 1 / span 12;
-}
-
-.ex6 .span-6 {
-  grid-column: 1 / span 6;
-}
-
-.ex6 .span-4 {
-  grid-column: 4 / span 4;
-}
-
-.ex6 .span-2 {
-  grid-column: 3 / span 2;
-}
-
 /*FLEX*/
 /*automatic horizontal/vertical format. needs flex-wrap*/
 .grid-ish {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* similar to css gap. not big support */
+  gap: 10px;
 }
 .fex.child-element/*or .flex>* */ {
   flex: 1 1 150px; /*  Stretching: */
