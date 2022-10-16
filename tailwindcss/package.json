@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "test": "npx tailwind -i style.css -o unbuddled.css",
-        "no-postcss":"npx tailwind -i style.css -o unbuddled.css --minify"
+        "start": "npx tailwind -i ./inputCss.css -o ./outputCss.css --watch",
+        "minify":"npx tailwind -i ./inputCss.css-o ./outputCss.css --minify",
+        "prettier": "npx prettier --write ./index.html"
       }
 }
