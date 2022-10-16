@@ -1,7 +1,7 @@
 {
     "scripts": {
         "start": "npx tailwind -i ./inputCss.css -o ./outputCss.css --watch",
-        "minify":"npx tailwind -i ./inputCss.css-o ./outputCss.css --minify",
+        "build":"npx tailwindcss -o ./outputCss.css --minify",
         "prettier": "npx prettier --write ./index.html"
       }
 }
