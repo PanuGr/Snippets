@@ -1,1 +1,10 @@
-{}
+// prettier.config.js
+module.exports = {
+  tailwindConfig: './tailwind.config.js',
+}
+
+/*
+It needs prettier and tailwind-plugin installed:
+npm install -D tailwindcss
+npm install -D prettier prettier-plugin-tailwindcss
+*/
