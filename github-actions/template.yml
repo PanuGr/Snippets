@@ -5,7 +5,7 @@ jobs: #Groups together all the jobs that run
   check-bats-version: #Defines a job name
     runs-on: ubuntu-latest
     steps: #Groups together all the steps that run in the job. Each item nested under this section is a separate action or shell script.
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3 #You should use the checkout action any time your workflow will run against the repository's code.
       - uses: actions/setup-node@v3
         with: # parameters
           node-version: '14'
