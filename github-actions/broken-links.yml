@@ -1,0 +1,16 @@
+name: broken_link_checker
+on: [workflow_dispatch]
+jobs:
+  Check-links:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run DeadFinder
+      uses: hahwul/deadfinder@1.2.4
+      id: broken-link
+      with:
+        command: url #or sitemap then add sitemap below
+        target: https://
+
+    - name: Output Handling
+      run: echo '${{ steps.broken-link.outputs.output }}'
+        

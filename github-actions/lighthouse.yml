@@ -1,0 +1,16 @@
+name: Lighthouse Check
+on: [workflow_dispatch]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Lighthouse
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: 'https://'
+    - name: Download the results
+      uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
