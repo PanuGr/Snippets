@@ -1,0 +1,14 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options= 'nosniff'
+    Referrer-Policy= 'no-referrer'
+
+   #  Multi-value headers are expressed with multi-line strings
+    content-security-policy = '''
+    frame-ancestors 'none';
+    object-src 'none';
+    base-uri 'none';
+    '''
