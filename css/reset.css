@@ -1,47 +1,42 @@
-/* Box sizing rules */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
+  /*If the display's width goes under the max-width set above then this padding prevents edge-to-edge text on mobile.
+We use 3em to provide top/bottom whitespace.
+padding: 3em 1em; 
+margin: auto; */
+  color-scheme: light dark;
   scroll-behavior: smooth;
-  /*If the display's width goes under the max-width set above, then this padding prevents edge-to-edge text on mobile.
-   We use 3em to provide top/bottom whitespace.*/
-  padding: 3em 1em;
-  margin: auto;
   line-height: 1.75;
   font-size: 18px;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100dvh;
+  font-family: system-ui;
   text-rendering: optimizeSpeed;
 }
 
-p {
-  max-inline-size: clamp(45ch, 65ch, 85ch);
+inputbuttontextareaselect {
+  font: inherit;
 }
 
-/* Make images easier to work with */
-img,
-picture {
+imgsvgvideopicture {
+  pointer-events: none;
   max-width: 100%;
   display: block;
   height: auto;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+p {
+  max-inline-size: clamp(45ch 65ch 85ch);
+  margin-inline: auto;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
