@@ -18,9 +18,17 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-     # "glenn2223.live-sass"
-     # "yandeu.five-server"
-     # "astro-build.astro"
+    # live sass  "glenn2223.live-sass"
+    # better live server "yandeu.five-server"
+    # astro language support "astro-build.astro"
+    # english spell "elijah-potter.harper"
+    # finnish spell "streetsidesoftware.code-spell-checker-finnish"
+    # greek spell "streetsidesoftware.code-spell-checker-greek"
+    # js linter "dbaeumer.vscode-eslint"
+    # html validate "html-vakidate.vscode-html-validate"
+    # emojis "bierner.emojisense"
+    # prettier "esbenp.prettier-vscode"
+
     ];
 
     # Enable previews
@@ -50,7 +58,7 @@
       # Runs when the workspace is (re)started
       onStart = {
         # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
+        # npm-start = "npm start";
       };
     };
   };
