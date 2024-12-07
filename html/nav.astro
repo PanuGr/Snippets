@@ -1,0 +1,119 @@
+---
+
+---
+<style>
+      /* Navigation Styles */
+       #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    #nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    #nav-links li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    #nav-links li a:hover {
+      background-color: #555;
+    }
+
+    /* Hide toggle button on larger screens */
+    #menu-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+      #nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        background-color: #333;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+
+      #nav-links li {
+        margin: 20px 0;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      #nav-links.show {
+        transform: translateX(0);
+      }
+    }
+
+    /* Accessibility: Focus Styles */
+    #nav-links li a:focus {
+      outline: 2px solid #fff;
+      background-color: #555;
+    }
+  </style>
+
+
+ <nav id="navbar">
+    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#palvelut">Palvelut</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+<script>
+    // Scroll-based show/hide navigation
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.transform = 'translateY(-100%)'; // Hide on scroll down
+      } else {
+        navbar.style.transform = 'translateY(0)'; // Show on scroll up
+      }
+      lastScrollTop = scrollTop;
+    });
+
+    // Toggle menu on small screens
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+
+    // Close menu when clicking a link on small screens
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        navLinks.classList.remove('show');
+      }
+    });
+
+  </script>
