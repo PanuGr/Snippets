@@ -21,11 +21,12 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-inputbuttontextareaselect {
+input,button,textarea,select {
   font: inherit;
+  field-sizing: content;
 }
 
-imgsvgvideopicture {
+img,svg,video,picture {
   pointer-events: none;
   max-width: 100%;
   display: block;
