@@ -38,6 +38,15 @@ p {
   margin-inline: auto;
 }
 
+.anchor {
+  anchor-name: --over-easy;
+}
+
+.positioned-element {
+  position: fixed;
+  position-anchor: --over-easy;
+  position-area: block-end;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
